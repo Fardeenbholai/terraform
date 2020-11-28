@@ -1,0 +1,990 @@
+2020/11/27 19:12:53 [INFO] Terraform version: 0.13.5  
+2020/11/27 19:12:53 [INFO] Go runtime version: go1.14.7
+2020/11/27 19:12:53 [INFO] CLI args: []string{"C:\\terraform\\terraform.exe", "plan"}
+2020/11/27 19:12:53 [DEBUG] Attempting to open CLI config file: C:\Users\Bhola\AppData\Roaming\terraform.rc
+2020/11/27 19:12:53 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/11/27 19:12:53 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/11/27 19:12:53 [DEBUG] ignoring non-existing provider search directory C:\Users\Bhola\AppData\Roaming\terraform.d\plugins
+2020/11/27 19:12:53 [DEBUG] ignoring non-existing provider search directory C:\Users\Bhola\AppData\Roaming\HashiCorp\Terraform\plugins
+2020/11/27 19:12:53 [INFO] CLI command args: []string{"plan"}
+2020/11/27 19:12:53 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/11/27 19:12:53 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/11/27 19:12:53 [DEBUG] New state was assigned lineage "17c836ae-ec7d-a36d-819a-d34bdb6e82e3"
+2020/11/27 19:12:53 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/11/27 19:12:53 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/11/27 19:12:53 [TRACE] providercache.fillMetaCache: scanning directory .terraform\plugins
+2020/11/27 19:12:53 [TRACE] getproviders.SearchLocalDirectory: .terraform\plugins is a symlink to .terraform\plugins
+2020/11/27 19:12:53 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.17.0 for windows_amd64 at .terraform\plugins\registry.terraform.io\hashicorp\aws\3.17.0\windows_amd64
+2020/11/27 19:12:53 [TRACE] providercache.fillMetaCache: including .terraform\plugins\registry.terraform.io\hashicorp\aws\3.17.0\windows_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.17.0
+2020/11/27 19:12:54 [DEBUG] checking for provisioner in "."
+2020/11/27 19:12:54 [DEBUG] checking for provisioner in "C:\\terraform"
+2020/11/27 19:12:54 [INFO] Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2020/11/27 19:12:54 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/11/27 19:12:54 [INFO] backend/local: starting Plan operation
+2020/11/27 19:12:54 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/11/27 19:12:54 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/11/27 19:12:54 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: existing snapshot has lineage "2f57f637-7fcd-b05e-eb0a-97d14be2fb36" serial 29
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: locking terraform.tfstate using LockFileEx
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/11/27 19:12:54 [TRACE] backend/local: reading remote state for workspace "default"
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/11/27 19:12:54 [TRACE] statemgr.Filesystem: read snapshot with lineage "2f57f637-7fcd-b05e-eb0a-97d14be2fb36" serial 29
+2020/11/27 19:12:54 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/11/27 19:12:54 [TRACE] backend/local: building context for current working directory
+2020/11/27 19:12:54 [TRACE] terraform.NewContext: starting
+2020/11/27 19:12:54 [TRACE] terraform.NewContext: loading provider schemas
+2020/11/27 19:12:54 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2020-11-27T19:12:54.477+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-11-27T19:12:54.505+0100 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe]
+2020-11-27T19:12:54.508+0100 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=1056
+2020-11-27T19:12:54.508+0100 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe
+2020-11-27T19:12:54.601+0100 [INFO]  plugin.terraform-provider-aws_v3.17.0_x5.exe: configuring server automatic mTLS: timestamp=2020-11-27T19:12:54.557+0100
+2020-11-27T19:12:54.632+0100 [DEBUG] plugin: using plugin: version=5
+2020-11-27T19:12:54.632+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-11-27T19:12:54.631+0100
+2020/11/27 19:12:54 [TRACE] GRPCProvider: GetSchema
+2020-11-27T19:12:54.691+0100 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/27 19:12:54 [TRACE] GRPCProvider: Close
+2020-11-27T19:12:54.764+0100 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-27T19:12:54.785+0100 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=1056
+2020-11-27T19:12:54.785+0100 [DEBUG] plugin: plugin exited
+2020/11/27 19:12:54 [TRACE] terraform.NewContext: complete
+2020/11/27 19:12:54 [TRACE] backend/local: finished building terraform.Context
+2020/11/27 19:12:54 [TRACE] backend/local: requesting interactive input, if necessary
+2020/11/27 19:12:54 [TRACE] Context.Input: Prompting for provider arguments
+2020/11/27 19:12:54 [TRACE] Context.Input: Provider provider.aws declared at provider.tf:1,1-15
+2020/11/27 19:12:54 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/11/27 19:12:54 [TRACE] backend/local: running validation operation
+2020/11/27 19:12:54 [INFO] terraform: building graph: GraphTypeValidate
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/27 19:12:54 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/27 19:12:54 [TRACE] OutputTransformer: adding instanceip as *terraform.nodeExpandOutput
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/27 19:12:54 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.first_instance" (*terraform.NodeValidatableResource) config from testing.tf:1,1-41
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.first_instance
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.terraform_vpc" (*terraform.NodeValidatableResource) config from vpc.tf:1,1-35
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_vpc.terraform_vpc
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching to "aws_internet_gateway.terra_igw" (*terraform.NodeValidatableResource) config from vpc.tf:9,1-44
+2020/11/27 19:12:54 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_internet_gateway.terra_igw
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/27 19:12:54 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:1,1-15
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/27 19:12:54 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_internet_gateway.terra_igw
+2020/11/27 19:12:54 [DEBUG] ProviderTransformer: "aws_internet_gateway.terra_igw" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.first_instance
+2020/11/27 19:12:54 [DEBUG] ProviderTransformer: "aws_instance.first_instance" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_vpc.terraform_vpc
+2020/11/27 19:12:54 [DEBUG] ProviderTransformer: "aws_vpc.terraform_vpc" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/27 19:12:54 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/27 19:12:54 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.first_instance
+2020/11/27 19:12:54 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.terraform_vpc
+2020/11/27 19:12:54 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_internet_gateway.terra_igw
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "aws_vpc.terraform_vpc" references: [var.vpc_cidr]
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "aws_internet_gateway.terra_igw" references: [aws_vpc.terraform_vpc]
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "output.instanceip (expand)" references: [aws_instance.first_instance]
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "var.vpc_cidr" references: []
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "var.subnets_cidr" references: []
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "var.azs" references: []
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/27 19:12:54 [DEBUG] ReferenceTransformer: "aws_instance.first_instance" references: []
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/27 19:12:54 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.first_instance - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+  aws_vpc.terraform_vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance - *terraform.NodeValidatableResource
+    aws_internet_gateway.terra_igw - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:54 [DEBUG] Starting graph walk: walkValidate
+2020/11/27 19:12:54 [TRACE] dag/walk: visiting "var.vpc_cidr"
+2020/11/27 19:12:54 [TRACE] vertex "var.vpc_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:54 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:12:54 [TRACE] dag/walk: visiting "var.subnets_cidr"
+2020/11/27 19:12:54 [TRACE] vertex "var.subnets_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:54 [TRACE] vertex "var.subnets_cidr": evaluating
+2020/11/27 19:12:54 [TRACE] [walkValidate] Entering eval tree: var.subnets_cidr
+2020/11/27 19:12:54 [TRACE] vertex "var.vpc_cidr": evaluating
+2020/11/27 19:12:54 [TRACE] [walkValidate] Entering eval tree: var.vpc_cidr
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:54 [TRACE] dag/walk: visiting "var.azs"
+2020/11/27 19:12:54 [TRACE] [walkValidate] Exiting eval tree: var.subnets_cidr
+2020/11/27 19:12:54 [TRACE] vertex "var.azs": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:54 [TRACE] vertex "var.subnets_cidr": visit complete
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:54 [TRACE] vertex "var.azs": evaluating
+2020/11/27 19:12:54 [TRACE] [walkValidate] Exiting eval tree: var.vpc_cidr
+2020/11/27 19:12:54 [TRACE] [walkValidate] Entering eval tree: var.azs
+2020/11/27 19:12:54 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:54 [TRACE] [walkValidate] Exiting eval tree: var.azs
+2020/11/27 19:12:54 [TRACE] vertex "var.azs": visit complete
+2020/11/27 19:12:54 [TRACE] vertex "var.vpc_cidr": visit complete
+2020/11/27 19:12:54 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/27 19:12:54 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalInitProvider
+2020-11-27T19:12:54.787+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-11-27T19:12:54.814+0100 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe]
+2020-11-27T19:12:54.816+0100 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=16976
+2020-11-27T19:12:54.816+0100 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe
+2020-11-27T19:12:54.910+0100 [INFO]  plugin.terraform-provider-aws_v3.17.0_x5.exe: configuring server automatic mTLS: timestamp=2020-11-27T19:12:54.866+0100
+2020-11-27T19:12:54.940+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-11-27T19:12:54.939+0100
+2020-11-27T19:12:54.940+0100 [DEBUG] plugin: using plugin: version=5
+2020-11-27T19:12:54.995+0100 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/27 19:12:54 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/27 19:12:54 [TRACE] eval: *terraform.EvalValidateProvider
+2020/11/27 19:12:54 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/27 19:12:54 [TRACE] GRPCProvider: GetSchema
+2020/11/27 19:12:55 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "aws_instance.first_instance"
+2020/11/27 19:12:55 [TRACE] vertex "aws_instance.first_instance": starting visit (*terraform.NodeValidatableResource)
+2020/11/27 19:12:55 [TRACE] vertex "aws_instance.first_instance": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: aws_instance.first_instance
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "aws_vpc.terraform_vpc"
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/27 19:12:55 [TRACE] vertex "aws_vpc.terraform_vpc": starting visit (*terraform.NodeValidatableResource)
+2020/11/27 19:12:55 [TRACE] vertex "aws_vpc.terraform_vpc": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: aws_vpc.terraform_vpc
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalValidateResource
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalValidateResource
+2020/11/27 19:12:55 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/27 19:12:55 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: aws_vpc.terraform_vpc
+2020/11/27 19:12:55 [TRACE] vertex "aws_vpc.terraform_vpc": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "aws_internet_gateway.terra_igw"
+2020/11/27 19:12:55 [TRACE] vertex "aws_internet_gateway.terra_igw": starting visit (*terraform.NodeValidatableResource)
+2020/11/27 19:12:55 [TRACE] vertex "aws_internet_gateway.terra_igw": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: aws_internet_gateway.terra_igw
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalValidateResource
+2020/11/27 19:12:55 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: aws_instance.first_instance
+2020/11/27 19:12:55 [TRACE] vertex "aws_instance.first_instance": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "output.instanceip (expand)"
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": starting visit (*terraform.nodeExpandOutput)
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": expanding dynamic subgraph
+2020/11/27 19:12:55 [TRACE] Expanding output: adding output.instanceip as *terraform.NodeApplyableOutput
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": entering dynamic subgraph
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "output.instanceip"
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": starting visit (*terraform.NodeApplyableOutput)
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: output.instanceip
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalWriteOutput
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: aws_internet_gateway.terra_igw
+2020/11/27 19:12:55 [TRACE] vertex "aws_internet_gateway.terra_igw": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/27 19:12:55 [TRACE] EvalWriteOutput: Removing output.instanceip from state (it is now null)
+2020/11/27 19:12:55 [TRACE] EvalWriteOutput: Saving Create change for output.instanceip in changeset
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: output.instanceip
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": visit complete
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": dynamic subgraph completed successfully
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": visit complete
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalCloseProvider
+2020/11/27 19:12:55 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/11/27 19:12:55 [TRACE] GRPCProvider: Close
+2020/11/27 19:12:55 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/11/27 19:12:55 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-11-27T19:12:55.146+0100 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-27T19:12:55.168+0100 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=16976
+2020-11-27T19:12:55.168+0100 [DEBUG] plugin: plugin exited
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "root"
+2020/11/27 19:12:55 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/11/27 19:12:55 [TRACE] vertex "root": evaluating
+2020/11/27 19:12:55 [TRACE] [walkValidate] Entering eval tree: root
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] [walkValidate] Exiting eval tree: root
+2020/11/27 19:12:55 [TRACE] vertex "root": visit complete
+2020/11/27 19:12:55 [INFO] backend/local: plan calling Refresh
+2020/11/27 19:12:55 [INFO] terraform: building graph: GraphTypeRefresh
+2020/11/27 19:12:55 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/27 19:12:55 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/27 19:12:55 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/27 19:12:55 [TRACE] OutputTransformer: adding instanceip as *terraform.nodeExpandOutput
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/27 19:12:55 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:1,1-15
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/27 19:12:55 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.vpc_cidr" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.subnets_cidr" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.azs" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "output.instanceip (expand)" references: []
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  root - *terraform.nodeCloseModule
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/11/27 19:12:55 [DEBUG] Starting graph walk: walkRefresh
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.azs"
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": evaluating
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Entering eval tree: var.azs
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.vpc_cidr"
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Exiting eval tree: var.azs
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": evaluating
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": visit complete
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Entering eval tree: var.vpc_cidr
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "output.instanceip (expand)"
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": starting visit (*terraform.nodeExpandOutput)
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Exiting eval tree: var.vpc_cidr
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.subnets_cidr"
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": evaluating
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": expanding dynamic subgraph
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Entering eval tree: var.subnets_cidr
+2020/11/27 19:12:55 [TRACE] Expanding output: adding output.instanceip as *terraform.NodeApplyableOutput
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": entering dynamic subgraph
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Exiting eval tree: var.subnets_cidr
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "output.instanceip"
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": starting visit (*terraform.NodeApplyableOutput)
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": evaluating
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Entering eval tree: output.instanceip
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalWriteOutput
+2020/11/27 19:12:55 [TRACE] EvalWriteOutput: Removing output.instanceip from state (it is now null)
+2020/11/27 19:12:55 [TRACE] EvalWriteOutput: Saving Create change for output.instanceip in changeset
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Exiting eval tree: output.instanceip
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip": visit complete
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": dynamic subgraph completed successfully
+2020/11/27 19:12:55 [TRACE] vertex "output.instanceip (expand)": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "root"
+2020/11/27 19:12:55 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/11/27 19:12:55 [TRACE] vertex "root": evaluating
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Entering eval tree: root
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] [walkRefresh] Exiting eval tree: root
+2020/11/27 19:12:55 [TRACE] vertex "root": visit complete
+2020/11/27 19:12:55 [INFO] backend/local: plan calling Plan
+2020/11/27 19:12:55 [INFO] terraform: building graph: GraphTypePlan
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/27 19:12:55 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/27 19:12:55 [TRACE] OutputTransformer: adding instanceip as *terraform.nodeExpandOutput
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/27 19:12:55 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.first_instance (expand)" (*terraform.nodeExpandPlannableResource) config from testing.tf:1,1-41
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.first_instance (expand)
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.terraform_vpc (expand)" (*terraform.nodeExpandPlannableResource) config from vpc.tf:1,1-35
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_vpc.terraform_vpc (expand)
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching to "aws_internet_gateway.terra_igw (expand)" (*terraform.nodeExpandPlannableResource) config from vpc.tf:9,1-44
+2020/11/27 19:12:55 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_internet_gateway.terra_igw (expand)
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/27 19:12:55 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:1,1-15
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/27 19:12:55 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.first_instance (expand)
+2020/11/27 19:12:55 [DEBUG] ProviderTransformer: "aws_instance.first_instance (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_vpc.terraform_vpc (expand)
+2020/11/27 19:12:55 [DEBUG] ProviderTransformer: "aws_vpc.terraform_vpc (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_internet_gateway.terra_igw (expand)
+2020/11/27 19:12:55 [DEBUG] ProviderTransformer: "aws_internet_gateway.terra_igw (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/27 19:12:55 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/27 19:12:55 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.first_instance (expand)
+2020/11/27 19:12:55 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.terraform_vpc (expand)
+2020/11/27 19:12:55 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_internet_gateway.terra_igw (expand)
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "aws_vpc.terraform_vpc (expand)" references: [var.vpc_cidr]
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "aws_internet_gateway.terra_igw (expand)" references: [aws_vpc.terraform_vpc (expand)]
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "output.instanceip (expand)" references: [aws_instance.first_instance (expand)]
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.subnets_cidr" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.azs" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "var.vpc_cidr" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/27 19:12:55 [DEBUG] ReferenceTransformer: "aws_instance.first_instance (expand)" references: []
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/27 19:12:55 [TRACE] ForcedCBDTransformer: "aws_instance.first_instance (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/11/27 19:12:55 [TRACE] ForcedCBDTransformer: "aws_vpc.terraform_vpc (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/11/27 19:12:55 [TRACE] ForcedCBDTransformer: "aws_internet_gateway.terra_igw (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+    var.vpc_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/27 19:12:55 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.terraform_vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.vpc_cidr - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+    output.instanceip (expand) - *terraform.nodeExpandOutput
+    var.azs - *terraform.NodeRootVariable
+    var.subnets_cidr - *terraform.NodeRootVariable
+  output.instanceip (expand) - *terraform.nodeExpandOutput
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.first_instance (expand) - *terraform.nodeExpandPlannableResource
+    aws_internet_gateway.terra_igw (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.azs - *terraform.NodeRootVariable
+  var.subnets_cidr - *terraform.NodeRootVariable
+  var.vpc_cidr - *terraform.NodeRootVariable
+  ------
+2020/11/27 19:12:55 [DEBUG] Starting graph walk: walkPlan
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.subnets_cidr"
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": evaluating
+2020/11/27 19:12:55 [TRACE] [walkPlan] Entering eval tree: var.subnets_cidr
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.vpc_cidr"
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": evaluating
+2020/11/27 19:12:55 [TRACE] [walkPlan] Entering eval tree: var.vpc_cidr
+2020/11/27 19:12:55 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/27 19:12:55 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] [walkPlan] Exiting eval tree: var.subnets_cidr
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalInitProvider
+2020/11/27 19:12:55 [TRACE] vertex "var.subnets_cidr": visit complete
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] [walkPlan] Exiting eval tree: var.vpc_cidr
+2020/11/27 19:12:55 [TRACE] vertex "var.vpc_cidr": visit complete
+2020/11/27 19:12:55 [TRACE] dag/walk: visiting "var.azs"
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": starting visit (*terraform.NodeRootVariable)
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": evaluating
+2020/11/27 19:12:55 [TRACE] [walkPlan] Entering eval tree: var.azs
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] [walkPlan] Exiting eval tree: var.azs
+2020/11/27 19:12:55 [TRACE] vertex "var.azs": visit complete
+2020-11-27T19:12:55.172+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-11-27T19:12:55.200+0100 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe]
+2020-11-27T19:12:55.203+0100 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=21756
+2020-11-27T19:12:55.203+0100 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe
+2020-11-27T19:12:55.300+0100 [INFO]  plugin.terraform-provider-aws_v3.17.0_x5.exe: configuring server automatic mTLS: timestamp=2020-11-27T19:12:55.256+0100
+2020-11-27T19:12:55.329+0100 [DEBUG] plugin: using plugin: version=5
+2020-11-27T19:12:55.329+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-11-27T19:12:55.329+0100
+2020-11-27T19:12:55.385+0100 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/27 19:12:55 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:12:55 [TRACE] eval: terraform.EvalNoop
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalSequence
+2020/11/27 19:12:55 [TRACE] eval: *terraform.EvalConfigProvider
+2020/11/27 19:12:55 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/27 19:12:55 [TRACE] GRPCProvider: GetSchema
+2020/11/27 19:12:55 [TRACE] GRPCProvider: Configure
+2020-11-27T19:12:55.455+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 2020/11/27 19:12:55 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2020-11-27T19:12:55.456+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 2020/11/27 19:12:55 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:05 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:10 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:15 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_internet_gateway.terra_igw (expand)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "aws_internet_gateway.terra_igw (expand)" is waiting for "aws_vpc.terraform_vpc (expand)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "output.instanceip (expand)" is waiting for "aws_instance.first_instance (expand)"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "aws_vpc.terraform_vpc (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:25 [TRACE] dag/walk: vertex "aws_instance.first_instance (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/27 19:13:27 [TRACE] backend/local: waiting for the running operation to stop
+2020/11/27 19:13:27 [WARN] terraform: Stop called, initiating interrupt sequence
+2020/11/27 19:13:27 [WARN] terraform: run context exists, stopping
+2020/11/27 19:13:27 [INFO] terraform: waiting for graceful stop to complete
+2020/11/27 19:13:27 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2020/11/27 19:13:27 [TRACE] GRPCProvider: Stop
+2020-11-27T19:13:27.123+0100 [TRACE] plugin.terraform-provider-aws_v3.17.0_x5.exe: plugin received interrupt signal, ignoring: count=1 timestamp=2020-11-27T19:13:27.122+0100
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: panic: close of nil channel
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: goroutine 42 [running]:
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc0017eb9a0)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x78
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc0017eb9a0, 0x6f2da40, 0xc000fa6cf0, 0xc000fa6f60, 0xc0017eb9a0, 0xc000fa6cf0, 0xc0006b1ba0)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa8
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x617bda0, 0xc0017eb9a0, 0x6f2da40, 0xc000fa6cf0, 0xc001a64060, 0x0, 0x6f2da40, 0xc000fa6cf0, 0x0, 0x0)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x21e
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000168c0, 0x6f52b00, 0xc0007c8180, 0xc00038a100, 0xc0015609f0, 0xa6e5ca8, 0x0, 0x0, 0x0)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x511
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: google.golang.org/grpc.(*Server).handleStream(0xc0000168c0, 0x6f52b00, 0xc0007c8180, 0xc00038a100, 0x0)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xd04
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000f529f0, 0xc0000168c0, 0x6f52b00, 0xc0007c8180, 0xc00038a100)
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa8
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-11-27T19:13:27.152+0100 [DEBUG] plugin.terraform-provider-aws_v3.17.0_x5.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x20b
+2020/11/27 19:13:27 [ERROR] eval: *terraform.EvalConfigProvider, err: rpc error: code = Unavailable desc = transport is closing
+2020-11-27T19:13:27.168+0100 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020/11/27 19:13:27 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/27 19:13:27 [ERROR] eval: *terraform.EvalOpFilter, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/27 19:13:27 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/27 19:13:27 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/27 19:13:27 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "aws_vpc.terraform_vpc (expand)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "aws_instance.first_instance (expand)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "output.instanceip (expand)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "aws_internet_gateway.terra_igw (expand)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2020/11/27 19:13:27 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/11/27 19:13:27 [TRACE] backend/local: graceful stop has completed
+2020/11/27 19:13:27 [WARN] terraform: stop complete
+2020/11/27 19:13:27 [INFO] backend/local: plan operation completed
+2020/11/27 19:13:27 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/11/27 19:13:27 [TRACE] statemgr.Filesystem: unlocked by closing terraform.tfstate
+2020-11-27T19:13:27.180+0100 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.17.0/windows_amd64/terraform-provider-aws_v3.17.0_x5.exe pid=21756 error="exit status 2"
+2020-11-27T19:13:27.180+0100 [DEBUG] plugin: plugin exited

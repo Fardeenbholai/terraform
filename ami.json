@@ -11,7 +11,7 @@
       "source_ami": "ami-04d29b6f966df1537",
       "ssh_username": "ec2-user",
       "ami_name": "webserver2",
-      "shared_credentials_file": "C:/Users/jake1/.aws/credentials",
+      "shared_credentials_file": "C:/Users/Bhola/.aws/credentials",
       "ami_description": "Amazon Linux Image with httpd",
       "run_tags": {
         "Name": "packerboi",
