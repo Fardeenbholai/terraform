@@ -76,7 +76,7 @@ resource "aws_route_table" "public_rt" {
 
 # private route table: includes route to NAT gateway
 
-resource "aws_route_table" "nat" {
+resource "aws_route_table" "private_rt" {
   count  = "${length(var.subnets_cidr_private)}"
   vpc_id = "${aws_vpc.terraform_vpc.id}"
 
@@ -87,4 +87,18 @@ resource "aws_route_table" "nat" {
   tags = {
     "Name" = "private-rt ${count.index + 1}"
   }
+}
+
+# associate public route table with public subnet
+resource "aws_route_table_association" "a-public" {
+  count          = "${length(var.subnets_cidr_public)}"
+  subnet_id      = "${element(aws_subnet.public.*.id, count.index)}"
+  route_table_id = "${aws_route_table.public_rt.id}"
+}
+
+# associate private route table with private subnet
+resource "aws_route_table_association" "a-private" {
+  count          = "${length(var.subnets_cidr_public)}"
+  subnet_id      = "${element(aws_subnet.private.*.id, count.index)}"
+  route_table_id = "${element(aws_route_table.private_rt.*.id, count.index)}"
 }
