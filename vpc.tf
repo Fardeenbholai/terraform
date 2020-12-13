@@ -164,7 +164,7 @@ resource "aws_lb_listener" "listener" {
 
 # Create a launch configuration for the autoscaling group
 resource "aws_launch_configuration" "asg_lt" {
-  image_id        = "${file("ami.json")}" # build with Packer
+  image_id        = "${file("ami.txt")}" # build with Packer
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.allow_http.id]
   depends_on      = [aws_security_group.allow_http, ]
