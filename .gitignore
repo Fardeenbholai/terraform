@@ -1,5 +1,0 @@
-/.terraform
-/.vscode
-provider.tf
-terraform.tfstate
-terraform.tfstate.backup
