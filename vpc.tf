@@ -103,22 +103,6 @@ resource "aws_route_table_association" "a-private" {
   route_table_id = element(aws_route_table.private_rt.*.id, count.index)
 }
 
-# Create a new load balancer
-# module "alb" {
-#   source  = "terraform-aws-modules/alb/aws"
-#   version = "~> 5.0"
-
-#   name = "my-alb"
-
-#   load_balancer_type = "application"
-#   vpc_id             = aws_vpc.terraform_vpc.id
-#   subnets            = ["subnet-abcde012", "subnet-bcde012a"]
-#   security_groups    = ["sg-edcd9784", "sg-edcd9785"]
-# }
-
-# create security group for alb
-
-
 resource "aws_security_group" "allow_http" {
   name        = "allow_http"
   description = "allow http traffic to ELB"
