@@ -103,14 +103,29 @@ resource "aws_route_table_association" "a-private" {
   route_table_id = "${element(aws_route_table.private_rt.*.id, count.index)}"
 }
 
-# Create a new load balancer
-module "alb" {
-  source  = "terraform-aws-modules/alb/aws"
-  version = "~> 5.0"
+#security group 
+resource "aws_security_group" "allow_http" {
+  name        = "allow_http"
+  description = "Allow http inbound traffic"
+  vpc_id      = aws_vpc.terraform_vpc.id
 
-  name = "my-alb"
+  ingress {
+    description = "http from VPC"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = [var.vpc_cidr]
+  }
 
-  load_balancer_type = "application"
-  vpc_id             = "${aws_vpc.terraform_vpc.id}"
-  subnets            = ["subnet-abcde012", "subnet-bcde012a"]
-  security_groups    = ["sg-edcd9784", "sg-edcd9785"]
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "allow_http"
+  }
+}
+
