@@ -1,2 +1,2 @@
 # terraform
-cheatsheet:
+Terraform template for a basic network + web app
