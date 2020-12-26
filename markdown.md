@@ -17,17 +17,23 @@ Met behulp van de boven genoemde faseringen is de klant zich bewust van de leven
 # Cloud governance aspecten
 **Strategy**
 
-Het definiëren van de bedrijfsstrategie is de eerste stap in het adoptie framework. Om tot een goede strategie te komen is het belangrijk dat er eerst overlegd wordt met belangrijke stakeholders en de leidinggevenden om de achterliggende reden en motivatie te verduidelijken. Hierna volgt het documenteren van de belangrijkste uitgangspunten die hieruit voortvloeien. Wanneer de strategie bekend is kan er een business case worden ontwikkeld. in de business case worden de financiële kosten besproken voor de migratie naar de Cloud. Een handige tool om gebruik van te maken is de TCO calculator. Hiermee kan een on-premise omgeving vergeleken worden met een Cloudomgeving de resultaten hiervan zijn ook zeer lijdend voor de businesscase. 
+Het definiëren van de bedrijfsstrategie is de eerste stap in het adoptie framework. Om tot een goede strategie te komen is het belangrijk dat er eerst overlegd wordt met belangrijke stakeholders en de leidinggevenden om de achterliggende reden en motivatie te verduidelijken. Hierna volgt het documenteren van de belangrijkste uitgangspunten die hieruit voortvloeien. Wanneer de strategie bekend is kan er een business case worden ontwikkeld. in de business case worden de financiële kosten besproken voor de migratie naar de Cloud. Een handige tool om gebruik van te maken is de TCO calculator. Hiermee kan een on-premise omgeving vergeleken worden met een Cloudomgeving de resultaten hiervan zijn ook zeer lijdend voor de businesscase.
+
+B. (2019, 4 mei). Een strategie voor cloudacceptatie ontwikkelen - Cloud Adoption Framework. Microsoft Docs. https://docs.microsoft.com/nl-nl/azure/cloud-adoption-framework/strategy/
 
 **Plan**
 
-De cloud adoptie plan zet de doelen van de cloud strategieën om in een uitvoerbaar plan. de Cloudteam kan vervolgens het plan gebruiken de technische aspecten sturing te kunnen geven zodat ze goed worden afgestemd op de bedrijfsstrategie. Er moet tijdens de planfase een inventaris gemaakt worden van de assets die gemigreerd dienen te worden. 
+De cloud adoptie plan zet de doelen van de cloud strategieën om in een uitvoerbaar plan. de Cloudteam kan vervolgens het plan gebruiken de technische aspecten sturing te kunnen geven zodat ze goed worden afgestemd op de bedrijfsstrategie. Er moet tijdens de planfase een inventaris gemaakt worden van de assets die gemigreerd dienen te worden.
+
+B. (2019b, mei 4). Plan voor cloudmigratie opstellen - Cloud Adoption Framework. Microsoft Docs. https://docs.microsoft.com/nl-nl/azure/cloud-adoption-framework/plan/
 
 **Preperation**
 
 Alvorens er gemigreerd kan worden naar de Cloud. Is het belangrijk om de AS-IS oftewel de huidige applicaties van de infrastructuur in kaart te brengen. Dit kan een behoorlijke klus zijn omdat je applicaties over de gehele organisatie verspreidt zijn en op verschillende manieren worden gebruikt. schakel daarom collega's van verschillende afdelingen in om een beeld te krijgen van hoe de applicaties interacteren.
 
 De volgende stap is het creëren van een landingzone. Dit zijn de outputvarianten van de Azure Cloud omgeving. voorbeelden van landingzones zijn : iaas, paas en saas. de landingzones maken de migratie naar de Cloud gemakkelijker met inachtneming voor schaalbaarheid, beveiliging en beheer.
+
+B. (2019a, mei 4). Cloudmigratie voorbereiden - Cloud Adoption Framework. Microsoft Docs. https://docs.microsoft.com/nl-nl/azure/cloud-adoption-framework/ready/
 
 **Migration**
 
@@ -46,6 +52,8 @@ Hieronder is te zien hoe het iteratieve proces van de migratiefase uitziet. En w
 
   Nadat de workload is geimplementeerd in een landingzone, kan er getest en geoptimaliseerd worden. Belangrijk hierbij is om de workloads over te dragen aan de governance, operations management, en securityteam voor continu ondersteuning van de workloads in de cloudomgeving. 
 
+  B. (2020a, mei 4). Cloudmigratie - Cloud Adoption Framework. Microsoft Docs. https://docs.microsoft.com/nl-nl/azure/cloud-adoption-framework/migrate/ 
+
 ![Screenshot](methodology.png)
 
 **Governance**
@@ -59,6 +67,7 @@ Governance is een iteratief proces het veranderd telkens omdat het beleid en de 
 * Benchmark: zorg voor het opstellen van een visie van waar je nu staat en waar je naartoe wilt werken.
 
 * initial governance foundation: maak gebruik van eenvoudige governance tools (mvp).
+
 
 **Manage** 
 
@@ -74,7 +83,7 @@ Om voor te bereiden voor de manage fase van de Cloud Adoption Framework, moeten 
 
 * protect and recover
 
-  Maak gebruik van services die ervoor zorgen dat de beschikbaarheid acceptabel is met zo min mogelijke verstoringen. Zorg er ook voor dat je snel kunt herstellen na een verstoring. 
+  Maak gebruik van services die ervoor zorgen dat de beschikbaarheid acceptabel is met zo min mogelijke verstoringen. Zorg er ook voor dat je snel kunt herstellen na een verstoring.
 
 
 
