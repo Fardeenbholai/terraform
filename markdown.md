@@ -19,19 +19,66 @@ Met behulp van de boven genoemde faseringen is de klant zich bewust van de leven
 
 Het definiëren van de bedrijfsstrategie is de eerste stap in het adoptie framework. Om tot een goede strategie te komen is het belangrijk dat er eerst overlegd wordt met belangrijke stakeholders en de leidinggevenden om de achterliggende reden en motivatie te verduidelijken. Hierna volgt het documenteren van de belangrijkste uitgangspunten die hieruit voortvloeien. Wanneer de strategie bekend is kan er een business case worden ontwikkeld. in de business case worden de financiële kosten besproken voor de migratie naar de Cloud. Een handige tool om gebruik van te maken is de TCO calculator. Hiermee kan een on-premise omgeving vergeleken worden met een Cloudomgeving de resultaten hiervan zijn ook zeer lijdend voor de businesscase. 
 
-**plan**
+**Plan**
 
 De cloud adoptie plan zet de doelen van de cloud strategieën om in een uitvoerbaar plan. de Cloudteam kan vervolgens het plan gebruiken de technische aspecten sturing te kunnen geven zodat ze goed worden afgestemd op de bedrijfsstrategie. Er moet tijdens de planfase een inventaris gemaakt worden van de assets die gemigreerd dienen te worden. 
 
-**preperation**
+**Preperation**
 
 Alvorens er gemigreerd kan worden naar de Cloud. Is het belangrijk om de AS-IS oftewel de huidige applicaties van de infrastructuur in kaart te brengen. Dit kan een behoorlijke klus zijn omdat je applicaties over de gehele organisatie verspreidt zijn en op verschillende manieren worden gebruikt. schakel daarom collega's van verschillende afdelingen in om een beeld te krijgen van hoe de applicaties interacteren.
 
 De volgende stap is het creëren van een landingzone. Dit zijn de outputvarianten van de Azure Cloud omgeving. voorbeelden van landingzones zijn : iaas, paas en saas. de landingzones maken de migratie naar de Cloud gemakkelijker met inachtneming voor schaalbaarheid, beveiliging en beheer.
 
-**migration**
+**Migration**
 
 Om het migratieproces te starten raad het framework aan om op een iteratieve manier je workload naar de Cloud te migreren. Door gebruik te maken van korte iteraties is kunnen fouten sneller opgemerkt en hersteld worden. 
+
+Hieronder is te zien hoe het iteratieve proces van de migratiefase uitziet. En welke bijbehorende subprocessen daarbij belangrijk zijn. 
+* assess workloads: 
+
+  beoordelen van de workloads door te kijken naar de kosten, benodigde tooling en soort architectuur dat gebruikt zal worden in de Cloudomgeving. Ook belangrijk om de dependencies en gebruikerspatronen te achterhalen zodat de workload technisch ook uitgevoerd kan worden. 
+
+* deploy workloads: 
+  
+  Workload wordt daadwerkelijk geimplementeerd in de cloudomgeving in de juiste vooraf bepaalde landingzone (iaas,paas of saas). 
+
+* Release workloads
+
+  Nadat de workload is geimplementeerd in een landingzone, kan er getest en geoptimaliseerd worden. Belangrijk hierbij is om de workloads over te dragen aan de governance, operations management, en securityteam voor continu ondersteuning van de workloads in de cloudomgeving. 
+
+![Screenshot](methodology.png)
+
+**Governance**
+
+Cloud governance focust zich op een strategische benadering van de langetermijn doelstellingen van een organisatie. Daarbij wordt gekeken naar of de juiste dingen gedaan worden, het op een juiste manier wordt uitgevoerd en hoe we kunnen evalueren dat het ook daadwerkelijk zo is. 
+
+Governance is een iteratief proces het veranderd telkens omdat het beleid en de processen van een organisatie ook telkens veranderen. Daarbij is het belangrijk om een goede fundering te voor het beheer van de gehele organisatie. De volgende taken helpen bij het bouwen van een governance foundation:
+
+* methodology: zorg voor de basiskennis en het beheersen hiervan van de Cloud Adoption Framework.
+
+* Benchmark: zorg voor het opstellen van een visie van waar je nu staat en waar je naartoe wilt werken.
+
+* initial governance foundation: maak gebruik van eenvoudige governance tools (mvp).
+
+**Manage** 
+
+Om voor te bereiden voor de manage fase van de Cloud Adoption Framework, moeten er een aantal stappen worden doorlopen om dit tot een success te laten lopen.
+
+* inventory
+
+  maak een inventariesatie lijst van de assets die kritiek zijn voor de bedrijfsvoering. 
+
+* operational compliance
+  
+  Beheren van de configuraties die plaatsvinden door bijvoorbeeld gebruik te maken van version control. Waarbij aanpassingen aan software code bijgehouden kan worden. 
+
+* protect and recover
+
+  Maak gebruik van services die ervoor zorgen dat de beschikbaarheid acceptabel is met zo min mogelijke verstoringen. Zorg er ook voor dat je snel kunt herstellen na een verstoring. 
+
+
+
+
 
 
 
