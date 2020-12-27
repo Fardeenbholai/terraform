@@ -77,28 +77,7 @@ Governance is een iteratief proces het veranderd telkens omdat het beleid en de 
 
 Om voor te bereiden voor de manage fase van de Cloud Adoption Framework, moeten er een aantal stappen worden doorlopen om dit tot een success te laten lopen.
 
-<<<<<<< HEAD
-* inventory
-
-  maak een inventariesatie lijst van de assets die kritiek zijn voor de bedrijfsvoering. 
-
-* operational compliance
-  
-  Beheren van de configuraties die plaatsvinden door bijvoorbeeld gebruik te maken van version control. Waarbij aanpassingen aan software code bijgehouden kan worden. 
-
-* protect and recover
-
-  Maak gebruik van services die ervoor zorgen dat de beschikbaarheid acceptabel is met zo min mogelijke verstoringen. Zorg er ook voor dat je snel kunt herstellen na een verstoring.
-
-# video
-https://www.youtube.com/watch?v=3g4JYwxz-cE 
-
-
-
-
-=======
 - inventory
->>>>>>> e9b6f020575c25814ddbff859c617e7d24ba8886
 
   maak een inventariesatie lijst van de assets die kritiek zijn voor de bedrijfsvoering.
 
@@ -121,3 +100,7 @@ Het sterkste punt van dit framework is dat het snel in de praktijk inzetbaar is.
 # Gebruik van framework
 
 Azure biedt dit framework aan aan klanten om gebruik van te maken. Klanten kunnen van dit framework gebruik maken om infrastructuur naar de Cloud te migreren.
+
+# Video
+https://www.youtube.com/watch?v=3g4JYwxz-cE 
+
