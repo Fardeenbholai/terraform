@@ -85,6 +85,9 @@ Om voor te bereiden voor de manage fase van de Cloud Adoption Framework, moeten 
 
   Maak gebruik van services die ervoor zorgen dat de beschikbaarheid acceptabel is met zo min mogelijke verstoringen. Zorg er ook voor dat je snel kunt herstellen na een verstoring.
 
+# video
+https://www.youtube.com/watch?v=3g4JYwxz-cE 
+
 
 
 
